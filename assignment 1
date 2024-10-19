@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int decimal_number;
+
+    // Input: Decimal number
+    printf("Enter a decimal number: ");
+    scanf("%d", &decimal_number);
+
+    // Print binary
+    printf("Binary: ");
+    for (int i = sizeof(decimal_number) * 8 - 1; i >= 0; i--) {
+        printf("%d", (decimal_number >> i) & 1);
+    }
+    printf("\n");
+
+    // Print hexadecimal
+    printf("Hexadecimal: %X\n", decimal_number);
+
+    // Print octal
+    printf("Octal: %o\n", decimal_number);
+
+    return 0;
+}
